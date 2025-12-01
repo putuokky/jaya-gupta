@@ -43,7 +43,10 @@
             <flux:checkbox name="remember" :label="__('Remember me')" :checked="old('remember')" />
 
             <div class="flex items-center justify-end">
-                <flux:button variant="primary" type="submit" class="w-full" data-test="login-button">
+                <flux:button class="g-recaptcha" 
+        data-sitekey="{{ env('SITE_KEY') }}" 
+        data-callback='onSubmit' 
+        data-action='submit' variant="primary" type="submit" class="w-full" data-test="login-button">
                     {{ __('Log in') }}
                 </flux:button>
             </div>
@@ -56,4 +59,15 @@
             </div>
         @endif
     </div>
+    
+    
+<script>
+    const widget = document.querySelector("#cap");
+
+widget.addEventListener("solve", function (e) {
+  const token = e.detail.token;
+
+  // Handle the token as needed
+});
+</script>
 </x-layouts.auth>

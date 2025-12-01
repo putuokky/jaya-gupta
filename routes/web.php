@@ -5,13 +5,17 @@ use Laravel\Fortify\Features;
 use Livewire\Volt\Volt;
 use App\Http\Controllers\SekolahController;
 use App\Http\Controllers\pesertaDidikController;
-
+use App\Http\Controllers\berandaController;
 use App\Http\Controllers\RombelController;
 
 Route::get('/', function () {
     return view('welcome');
 })->name('home');
-
+Route::get('/captchachallenge', function () {
+    return response()->json([
+        'message' => 'CAPTCHA challenge endpoint',
+    ]);
+})->name('captchachallenge');
 Route::get('/beranda', function () {
     return view('beranda');
 })->middleware(['auth'])->name('beranda');
@@ -23,6 +27,8 @@ Route::middleware(['auth:web', 'role:superadmin|kepalasekolah|operator|pimpinan'
     Route::get('data-peserta-didik/show/{kode_wil}', [pesertaDidikController::class, 'peserta_didik_kec'])->name('data-peserta-didik.show');
     Route::get('data-peserta-didik/perSekolah/{kode_sekolah}', [pesertaDidikController::class, 'peserta_didik_sekolah'])->name('data-peserta-didik.peserta_didik_sekolah');
     Route::get('rombel',[RombelController::class, 'index'])->name('rombel.index');
+    Route::get('beranda',[berandaController::class,'index'])->name('beranda');
+   
 });
 Route::middleware(['auth'])->group(function () {
     Route::redirect('settings', 'settings/profile');
