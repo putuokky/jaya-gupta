@@ -8,7 +8,7 @@ use App\Http\Controllers\pesertaDidikController;
 use App\Http\Controllers\berandaController;
 use App\Http\Controllers\RombelController;
 use App\Http\Controllers\GuruController;
-
+use App\Http\Controllers\TendikController;
 Route::get('/', function () {
     return view('welcome');
 })->name('home');
@@ -34,7 +34,9 @@ Route::middleware(['auth:web', 'role:superadmin|kepalasekolah|operator|pimpinan'
     Route::get('guru',[GuruController::class,'index'])->name('guru.index');
     Route::get('guru/perWilayah/{kode_wil}', [GuruController::class, 'perWilayah'])->name('guru.perWilayah');
     Route::get('guru/perSekolah/{kode_sekolah}', [GuruController::class, 'perSekolah'])->name('guru.perSekolah');
-
+    Route::get('tendik',[TendikController::class,'index'])->name('tendik.index');
+    Route::get('tendik/perWilayah/{kode_wil}', [TendikController::class, 'perWilayah'])->name('tendik.perWilayah');
+    Route::get('tendik/perSekolah/{kode_sekolah}', [TendikController::class, 'perSekolah'])->name('tendik.perSekolah');
    
 });
 Route::middleware(['auth'])->group(function () {
