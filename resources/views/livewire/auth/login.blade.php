@@ -5,7 +5,7 @@
         <!-- Session Status -->
         <x-auth-session-status class="text-center" :status="session('status')" />
 
-        <form method="POST" action="{{ route('login.store') }}" class="flex flex-col gap-6">
+        <form method="POST" action="{{ route('login.store') }}" class="flex flex-col gap-6" id="login-form">
             @csrf
 
             <!-- Email Address -->
@@ -42,11 +42,17 @@
             <!-- Remember Me -->
             <flux:checkbox name="remember" :label="__('Remember me')" :checked="old('remember')" />
 
+            <!-- reCAPTCHA v2 Checkbox -->
+            <div class="g-recaptcha" data-sitekey="{{ config('services.recaptcha.site_key') }}"></div>
+            
+            @error('g-recaptcha-response')
+                <div class="text-sm text-red-600">
+                    {{ $message }}
+                </div>
+            @enderror
+
             <div class="flex items-center justify-end">
-                <flux:button class="g-recaptcha" 
-        data-sitekey="{{ env('SITE_KEY') }}" 
-        data-callback='onSubmit' 
-        data-action='submit' variant="primary" type="submit" class="w-full" data-test="login-button">
+                <flux:button variant="primary" type="submit" class="w-full" data-test="login-button">
                     {{ __('Log in') }}
                 </flux:button>
             </div>
@@ -59,15 +65,17 @@
             </div>
         @endif
     </div>
-    
-    
-<script>
-    const widget = document.querySelector("#cap");
 
-widget.addEventListener("solve", function (e) {
-  const token = e.detail.token;
-
-  // Handle the token as needed
-});
-</script>
+    <!-- Google reCAPTCHA v2 Checkbox Script -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script>
+        document.getElementById('login-form').addEventListener('submit', function(e) {
+            var recaptchaResponse = grecaptcha.getResponse();
+            if (!recaptchaResponse) {
+                e.preventDefault();
+                alert('{{ __("Please verify that you are not a robot.") }}');
+                return false;
+            }
+        });
+    </script>
 </x-layouts.auth>

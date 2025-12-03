@@ -53,7 +53,10 @@
                             @foreach($data as $i => $row)
                                 <tr class="border-t even:bg-white odd:bg-gray-50">
                                     <td class="px-6 py-6 text-sm">{{ ($data->firstItem() ?? 0) + $i }}</td>
-                                    <td class="px-6 py-6 text-sm text-blue-600">{{ $row->induk_kecamatan ?? $row['induk_kecamatan'] ?? $row->wilayah ?? $row['wilayah'] ?? '-' }}</td>
+                                    @php
+                                    $kode_wil = Crypt::encrypt($row->kode_wil);     
+                                    @endphp
+                                    <td class="px-6 py-6 text-sm text-blue-600"><a href="{{ URL::to('rombel/perKecamatan/' . $kode_wil) }}">{{ $row->induk_kecamatan  }}</a></td>
                                         <td class="px-6 py-6 text-sm text-center">{{ is_numeric($row->total ?? $row['total'] ?? null) ? ($row->total ?? $row['total']) : 0 }}</td>
                                         <td class="px-6 py-6 text-sm text-center">{{ is_numeric($row->tk ?? $row['tk'] ?? null) ? ($row->tk ?? $row['tk']) : 0 }}</td>
                                         <td class="px-6 py-6 text-sm text-center">{{ is_numeric($row->sd ?? $row['sd'] ?? null) ? ($row->sd ?? $row['sd']) : 0 }}</td>

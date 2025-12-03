@@ -27,6 +27,8 @@ Route::middleware(['auth:web', 'role:superadmin|kepalasekolah|operator|pimpinan'
     Route::get('data-peserta-didik/show/{kode_wil}', [pesertaDidikController::class, 'peserta_didik_kec'])->name('data-peserta-didik.show');
     Route::get('data-peserta-didik/perSekolah/{kode_sekolah}', [pesertaDidikController::class, 'peserta_didik_sekolah'])->name('data-peserta-didik.peserta_didik_sekolah');
     Route::get('rombel',[RombelController::class, 'index'])->name('rombel.index');
+     Route::get('rombel/perKecamatan/{kode_wil}',[RombelController::class, 'rombel_kec'])->name('rombel.rombel_kec');
+    Route::get('rombel/perSekolah/{kode_sekolah}',[RombelController::class, 'rombel_sekolah'])->name('rombel.rombel_sekolah');
     Route::get('beranda',[berandaController::class,'index'])->name('beranda');
    
 });

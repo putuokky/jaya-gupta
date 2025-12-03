@@ -22,4 +22,9 @@ class Rombel extends Model
      {
         return $this->hasOne(Biodata::class, 'nuptk', 'wali_kelas');
     }
+    public function peserta_didik()
+    {
+        return $this->hasMany(PesertaDidik::class, 'rombel', 'nama_rombel');
+
+    }
 }

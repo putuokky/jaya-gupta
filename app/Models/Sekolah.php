@@ -23,5 +23,9 @@ class Sekolah extends Model
     {
         return $this->hasMany(PesertaDidik::class, 'sekolah_npsn', 'npsn');
     }
+    public function Rombel()
+    {
+        return $this->hasMany(Rombel::class, 'sekolah_npsn', 'npsn');
+    }
 
 }

@@ -23,7 +23,7 @@
 
 					<form method="GET" action="" class="flex items-center">
 						<label class="mr-2 text-sm text-gray-600">Search:</label>
-						<input class="border py-2 px-3 rounded" type="text" name="search" placeholder="Search" aria-label="Search" />
+						<input class="border py-2 px-3 rounded" type="text" name="search" value="{{ request('search') }}" placeholder="Search" aria-label="Search" />
 					</form>
 				</div>
 

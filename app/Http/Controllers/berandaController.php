@@ -9,9 +9,7 @@ class berandaController extends Controller
 {
     public function index(){
         $total_sekolah=Sekolah::count();
-        $total_pns=   User::with('bio.user_bidang_pengembangan')->whereHas('bio', function ($q) {
-                $q->whereNotNull('nip');
-            })->count();
+        // $total_pns=   User::with(['bio']=>)->count();
         return view('beranda');
     }
 }
