@@ -121,7 +121,7 @@
                 <span class="ml-4">Data Peserta DSidik</span>
               </a>
             </li>
-            <li class="relative px-6 py-3">
+            <li class="relative px-6 py-3 {{ Route::is('rombel.*') ? 'bg-blue-500 text-white' : 'text-gray-800' }}">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
                 href="{{ route('rombel.index') }}"
@@ -143,10 +143,10 @@
                 <span class="ml-4">Data Rombel</span>
               </a>
             </li>
-             <li class="relative px-6 py-3">
+             <li class="relative px-6 py-3 {{ Route::is('guru.*') ? 'bg-blue-500 text-white' : 'text-gray-800' }}">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
-                href="cards.html"
+                href="{{route('guru.index')}}"
               >
                 <svg
                   class="w-5 h-5"
@@ -165,10 +165,10 @@
                 <span class="ml-4">Data Guru</span>
               </a>
             </li>
-            <li class="relative px-6 py-3">
+            <li class="relative px-6 py-3 {{ Route::is('tendik.*') ? 'bg-blue-500 text-white' : 'text-gray-800' }}">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
-                href="modals.html"
+                href="{{ route('tendik.index') }}"
               >
                 <svg
                   class="w-5 h-5"

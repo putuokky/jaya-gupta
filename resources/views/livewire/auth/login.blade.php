@@ -43,7 +43,7 @@
             <flux:checkbox name="remember" :label="__('Remember me')" :checked="old('remember')" />
 
             <!-- reCAPTCHA v2 Checkbox -->
-            <div class="g-recaptcha" data-sitekey="{{ config('services.recaptcha.site_key') }}"></div>
+            <div class="g-recaptcha" data-sitekey="{{ config('services.recaptcha.site_key') }}" data-callback="onRecaptchaSuccess" data-expired-callback="onRecaptchaExpired"></div>
             
             @error('g-recaptcha-response')
                 <div class="text-sm text-red-600">
@@ -69,13 +69,37 @@
     <!-- Google reCAPTCHA v2 Checkbox Script -->
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script>
+        var recaptchaVerified = false;
+
+        // Callback when reCAPTCHA is successfully verified
+        function onRecaptchaSuccess(token) {
+            recaptchaVerified = true;
+            console.log('reCAPTCHA verified successfully with token:', token.substring(0, 20) + '...');
+        }
+
+        // Callback when reCAPTCHA expires
+        function onRecaptchaExpired() {
+            recaptchaVerified = false;
+            console.log('reCAPTCHA has expired');
+        }
+
         document.getElementById('login-form').addEventListener('submit', function(e) {
-            var recaptchaResponse = grecaptcha.getResponse();
-            if (!recaptchaResponse) {
+            // Check if reCAPTCHA was verified via callback
+            if (!recaptchaVerified) {
                 e.preventDefault();
                 alert('{{ __("Please verify that you are not a robot.") }}');
                 return false;
             }
+
+            // Also verify that the textarea has the token
+            var recaptchaTextarea = document.querySelector('textarea[name="g-recaptcha-response"]');
+            if (!recaptchaTextarea || !recaptchaTextarea.value) {
+                e.preventDefault();
+                alert('{{ __("reCAPTCHA token missing. Please try again.") }}');
+                return false;
+            }
+
+            console.log('Form submitted with reCAPTCHA token');
         });
     </script>
 </x-layouts.auth>

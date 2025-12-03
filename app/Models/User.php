@@ -76,4 +76,8 @@ class User extends Authenticatable
             ->map(fn ($word) => Str::substr($word, 0, 1))
             ->implode('');
     }
+    public function biodata()
+    {
+        return $this->hasOne(Biodata::class, 'id', 'id');
+    }
 }

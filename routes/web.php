@@ -7,6 +7,7 @@ use App\Http\Controllers\SekolahController;
 use App\Http\Controllers\pesertaDidikController;
 use App\Http\Controllers\berandaController;
 use App\Http\Controllers\RombelController;
+use App\Http\Controllers\GuruController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -30,6 +31,10 @@ Route::middleware(['auth:web', 'role:superadmin|kepalasekolah|operator|pimpinan'
      Route::get('rombel/perKecamatan/{kode_wil}',[RombelController::class, 'rombel_kec'])->name('rombel.rombel_kec');
     Route::get('rombel/perSekolah/{kode_sekolah}',[RombelController::class, 'rombel_sekolah'])->name('rombel.rombel_sekolah');
     Route::get('beranda',[berandaController::class,'index'])->name('beranda');
+    Route::get('guru',[GuruController::class,'index'])->name('guru.index');
+    Route::get('guru/perWilayah/{kode_wil}', [GuruController::class, 'perWilayah'])->name('guru.perWilayah');
+    Route::get('guru/perSekolah/{kode_sekolah}', [GuruController::class, 'perSekolah'])->name('guru.perSekolah');
+
    
 });
 Route::middleware(['auth'])->group(function () {
