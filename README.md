@@ -1,30 +1,59 @@
-# Laravel + Livewire Starter Kit
+# JAYA GUPTA
 
-## Introduction
+## Fitur
 
-Our Laravel + [Livewire](https://livewire.laravel.com) starter kit provides a robust, modern starting point for building Laravel applications with a Livewire frontend.
+-   Inovasi Praktik Baik
+-   SI GTK
 
-Livewire is a powerful way of building dynamic, reactive, frontend UIs using just PHP. It's a great fit for teams that primarily use Blade templates and are looking for a simpler alternative to JavaScript-driven SPA frameworks like React and Vue.
+## Technology Used
 
-This Livewire starter kit utilizes Livewire 3, Laravel Volt (optionally), TypeScript, Tailwind, and the [Flux UI](https://fluxui.dev) component library.
+-   Laravel 12
+-   Spatie
+-   IndoRegion by Azishapidin
 
-If you are looking for the alternate configurations of this starter kit, they can be found in the following branches:
+## How to Install and Run
 
-- [components](https://github.com/laravel/livewire-starter-kit/tree/components) - if Volt is not selected
-- [workos](https://github.com/laravel/livewire-starter-kit/tree/workos) - if WorkOS is selected for authentication
+1. Clone the repository:
+    ```bash
+     git clone https://github.com/putuokky/jaya-gupta.git
+    ```
+2. Navigate into the project directory:
+    ```bash
+     cd jaya-gupta
+    ```
+3. Install PHP dependencies:
+    ```bash
+     composer install
+    ```
+4. Install JavaScript dependencies:
+    ```bash
+     npm install
+    ```
+5. Copy the `.env.example` file and rename it to `.env`:
+    ```bash
+     cp .env.example .env
+    ```
+6. Generate application key:
+    ```bash
+     php artisan key:generate
+    ```
+7. Run database migrations:
 
-## Official Documentation
+    ```bash
+     php artisan migrate
+    ```
 
-Documentation for all Laravel starter kits can be found on the [Laravel website](https://laravel.com/docs/starter-kits).
+    with use all seeder:
 
-## Contributing
+    ```bash
+     php artisan migrate:fresh --seed
+    ```
 
-Thank you for considering contributing to our starter kit! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## License
-
-The Laravel + Livewire starter kit is open-sourced software licensed under the MIT license.
+8. Running npm
+    ```bash
+     npm run dev
+    ```
+9. Start the development server:
+    ```bash
+    php artisan serve
+    ```
