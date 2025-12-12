@@ -31,7 +31,8 @@
       class="flex h-screen bg-gray-50 dark:bg-gray-900"
       :class="{ 'overflow-hidden': isSideMenuOpen }"
     >
-      <!-- Desktop sidebar -->
+
+
       <aside
         class="z-20 hidden w-64 overflow-y-auto bg-white dark:bg-gray-800 md:block flex-shrink-0"
       >
@@ -46,12 +47,16 @@
             <li class="text-gray-400 px-3 text-sm">
                 Beranda
             </li>
-            <li class="relative px-6 py-3 {{ Route::is('beranda') ? 'bg-blue-500 text-white' : 'text-gray-800' }}">
+            <li class="relative px-3 py-3 {{ Route::is('beranda') ? 'bg-blue-500 text-white' : 'text-gray-800' }}">
            
               <a
      
-                class=" inline-flex items-center w-full text-sm font-semibold  transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-100"
+                class=" inline-flex items-center w-full bg-gray-100 rounded-md py-2 px-3 text-sm font-semibold  transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-100"
+                  @if(auth()->user()->hasRole('superadmin'))
                 href="{{ route('beranda') }}"
+                @elseif(auth()->user()->hasRole('kepalasekolah'))
+                href="{{ route('sekolah.beranda') }}"
+                @endif
               >
                 <svg
                   class="w-5 h-5"
@@ -75,10 +80,14 @@
               <li class="text-gray-400 px-3 text-sm ">
                 SI GTK
             </li>
-            <li class="relative px-6 py-3 {{ Route::is('data-sekolah') ? 'bg-blue-500 text-white' : 'text-gray-800' }}">
+            <li class="relative px-3 py-3 {{ Route::is('data-sekolah') ? 'bg-blue-500 text-white' : 'text-gray-800' }}">
               <a
-                class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
+                class="inline-flex items-center bg-gray-100 rounded-md py-2 px-3 w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
+                 @if(auth()->user()->hasRole('superadmin'))
                 href="{{ route('data-sekolah') }}"
+                @elseif(auth()->user()->hasRole('kepalasekolah'))
+                href="{{ url('data-sekolah/show-detail',Crypt::encrypt(auth()->user()->biodata->asal_satuan_pendidikan)) }}"
+                @endif
               >
                 <svg
                   class="w-5 h-5"
@@ -97,6 +106,11 @@
                 <span class="ml-4">Data Sekolah</span>
               </a>
             </li>
+
+            {{-- create dropdown --}}
+            
+
+            @if(auth()->user()->hasRole('superadmin'))
            
             <li class="relative px-6 py-3 {{ Route::is('data-peserta-didik.*') ? 'bg-blue-500 text-white' : 'text-gray-800' }}">
                 <a
@@ -189,8 +203,8 @@
             </li>
             <li class="relative px-6 py-3">
               <a
-                class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
-                href="tables.html"
+                class="inline-flex items-center bg-gray-100 rounded-md py-2 px-3 w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
+                href="/nonaktif"
               >
                 <svg
                   class="w-5 h-5"
@@ -207,7 +221,26 @@
                 <span class="ml-4">Data GTK Non Aktif</span>
               </a>
             </li>
-
+            @endif
+              <li class="relative px-3 py-3" x-data="{ isPagesMenuOpen: false }">
+              <button @click="isPagesMenuOpen = !isPagesMenuOpen" class="inline-flex bg-gray-100 rounded-md py-2 px-3 items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200">
+                GTK 
+              </button>
+              <ul class="pl-3" x-show="isPagesMenuOpen" @click.away="isPagesMenuOpen = false">
+                <li class="inline-flex items-center w-full text-sm py-2  font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200">
+                  <a href="/guru/perSekolah/{{ Crypt::encrypt(auth()->user()->biodata->asal_satuan_pendidikan) }}">
+                    Data guru
+                  </a>
+                </li>
+                 <li class="inline-flex items-center w-full text-sm py-2  font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200">
+                   <a href="/tendik/perSekolah/{{ Crypt::encrypt(auth()->user()->biodata->asal_satuan_pendidikan) }}">
+                  Data tendik
+                    </a>
+                </li>
+                 <li class="inline-flex items-center w-full text-sm py-2  font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200">
+                  Guru non aktif
+                </li>
+            </li>
           </ul>
        
         </div>

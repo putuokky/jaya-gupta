@@ -64,7 +64,7 @@ class SekolahController extends Controller
         $getData =Sekolah::withCount(['PesertaDidik'=>function($q) {
             $q->whereNotNull('rombel');
         }])->where('npsn', $npsn)->first();
-          
+        //   dd($getData);
         return view('GTK.sekolah.detail', compact('getData'));
     }
 }

@@ -6,6 +6,10 @@ use App\Models\Sekolah;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Models\User;
+use App\Models\Biodata;
+
+use App\Models\Pangkat;
+use App\Models\JenjangPendidikanDikti;
 class TendikController extends Controller
 {
     public function index()
@@ -93,5 +97,17 @@ class TendikController extends Controller
         $sekolah = Sekolah::where('npsn', $kode_sekolah)->first();
       
         return view('GTK.tendik.perSekolah', compact('kode_sekolah', 'data', 'sekolah'));
+    }
+    public function detail($id)
+    {
+        $user = User::join('ms_biodatauser as b', 'users.id', '=', 'b.id')
+            ->whereHas('roles', function($q) {
+                $q->where('name', 'tendik');
+            })
+            ->select('b.*')
+            ->where('users.id', $id)
+            ->first();
+            
+        return view('GTK.tendik.detail', compact('user'));
     }
 }

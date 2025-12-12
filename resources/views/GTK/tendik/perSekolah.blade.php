@@ -45,52 +45,55 @@
 						<thead class="bg-gray-100">
 							 <tr>
                                           
-                                            <th class="text-center">No</th>
-                                            <th class="text-center">Nama</th>
-                                            <th class="text-center">NUPTK</th>
-                                            <th class="text-center">JK</th>
-                                            <th class="text-center">Tempat Lahir</th>
-                                            <th class="text-center">Tanggal Lahir</th>
-                                            <th class="text-center">NIP</th>
-                                            <th class="text-center">Status Kepegawaian</th>
-                                            <th class="text-center">Mengajar</th>
-                                            <th class="text-center">Gelar Depan</th>
-                                            <th class="text-center">Gelar Belakang</th>
-                                            <th class="text-center">Jenjang</th>
-                                            <th class="text-center">Jurusan/Prodi</th>
-                                            <th class="text-center">Sertifikasi</th>
-                                            <th class="text-center">Nama Dusun</th>
-                                            <th class="text-center">Desa/Kelurahan</th>
-                                            <th class="text-center">Kecamatan</th>
-                                            <th class="text-center">Kodepos</th>
-                                            <th class="text-center">Telepon</th>
-                                            <th class="text-center">HP</th>
-                                            <th class="text-center">Email</th>
-                                            <th class="text-center">Tugas Tambahan</th>
-                                            <th class="text-center">SK CPNS</th>
-                                            <th class="text-center">Tanggal CPNS</th>
-                                            <th class="text-center">SK Pengangkatan</th>
-                                            <th class="text-center">TMT Pengangkatan</th>
-                                            <th class="text-center">Lembaga Pengangkatan</th>
-                                            <th class="text-center">Pangkat Golongan</th>
-                                            <th class="text-center">Sumber Gaji</th>
-                                            <th class="text-center">Nama Ibu Kandung</th>
-                                            <th class="text-center">Status Perkawinan</th>
-                                            <th class="text-center">Nama Suami/Istri</th>
-                                            <th class="text-center">Pekerjaan Suami/Istri</th>
-                                            <th class="text-center">TMT PNS</th>
-                                            <th class="text-center">NPWP</th>
-                                            <th class="text-center">Bank</th>
-                                            <th class="text-center">No Rekening</th>
-                                            <th class="text-center">Rekening Atas Nama</th>
-                                            <th class="text-center">NIK</th>
-                                            <th class="text-center">No KK</th>
-                                            <th class="text-center">Guru Penggerak</th>
-                                            <th class="text-center">Tugas Tambahan</th>
-                                            <th class="text-center">JJM</th>
-                                            <th class="text-center">Total JJM</th>
-                                            <th class="text-center">Siswa</th>
-                                            <th class="text-center">Status Sekolah</th>
+                                            <th class="text-center px-3">No</th>
+                                            <th class="text-center px-3">Nama</th>
+                                            <th class="text-center px-3">NUPTK</th>
+                                            <th class="text-center px-3">JK</th>
+                                            <th class="text-center px-3">Tempat Lahir</th>
+                                            <th class="text-center px-3">Tanggal Lahir</th>
+                                            <th class="text-center px-3">NIP</th>
+                                            <th class="text-center px-3">Status Kepegawaian</th>
+                                            <th class="text-center px-3">Mengajar</th>
+                                            <th class="text-center px-3">Gelar Depan</th>
+                                            <th class="text-center px-3">Gelar Belakang</th>
+                                            <th class="text-center px-3">Jenjang</th>
+                                            <th class="text-center px-3">Jurusan/Prodi</th>
+                                            <th class="text-center px-3">Sertifikasi</th>
+                                            <th class="text-center px-3">Nama Dusun</th>
+                                            <th class="text-center px-3">Desa/Kelurahan</th>
+                                            <th class="text-center px-3">Kecamatan</th>
+                                            <th class="text-center px-3">Kodepos</th>
+                                            <th class="text-center px-3">Telepon</th>
+                                            <th class="text-center px-3">HP</th>
+                                            <th class="text-center px-3">Email</th>
+                                            <th class="text-center px-3">Tugas Tambahan</th>
+                                            <th class="text-center px-3">SK CPNS</th>
+                                            <th class="text-center px-3">Tanggal CPNS</th>
+                                            <th class="text-center px-3">SK Pengangkatan</th>
+                                            <th class="text-center px-3">TMT Pengangkatan</th>
+                                            <th class="text-center px-3">Lembaga Pengangkatan</th>
+                                            <th class="text-center px-3">Pangkat Golongan</th>
+                                            <th class="text-center px-3">Sumber Gaji</th>
+                                            <th class="text-center px-3">Nama Ibu Kandung</th>
+                                            <th class="text-center px-3">Status Perkawinan</th>
+                                            <th class="text-center px-3">Nama Suami/Istri</th>
+                                            <th class="text-center px-3">Pekerjaan Suami/Istri</th>
+                                            <th class="text-center px-3">TMT PNS</th>
+                                            <th class="text-center px-3">NPWP</th>
+                                            <th class="text-center px-3">Bank</th>
+                                            <th class="text-center px-3">No Rekening</th>
+                                            <th class="text-center px-3">Rekening Atas Nama</th>
+                                            <th class="text-center px-3">NIK</th>
+                                            <th class="text-center px-3">No KK</th>
+                                            <th class="text-center px-3">Guru Penggerak</th>
+                                            <th class="text-center px-3">Tugas Tambahan</th>
+                                            <th class="text-center px-3">JJM</th>
+                                            <th class="text-center px-3">Total JJM</th>
+                                            <th class="text-center px-3">Siswa</th>
+                                            <th class="text-center px-3">Status Sekolah</th>
+                                            @if(Auth::user()->hasRole('kepalasekolah'))
+                                        <th class="text-center px-3 sticky right-0 bg-gray-100">Aksi</th>
+                                        @endif
                                         </tr>
 						</thead>
 						<tbody class="bg-white">
@@ -99,51 +102,63 @@
 									<tr class="border-t even:bg-white odd:bg-gray-50">
 										<td class="px-4 py-3 text-sm">{{ ($data->firstItem() ?? 0) + $i }}</td>
 							
-                                                <td class="whitespace-nowrap">{{ $dt->nama }}</td>
-                                                <td>{{ $dt->nuptk }}</td>
-                                                <td>{{ $dt->gender }}</td>
-                                                <td  class="whitespace-nowrap">{{ $dt->tempatlahir }}</td>
-                                                <td  class="whitespace-nowrap">{{Carbon\Carbon::parse($dt->tanggallahir)->format('d-m-Y') }}</td>
-                                                <td>{{ $dt->nip }}</td>
-                                                <td>{{ $dt->status_kepegawaian }}</td>
-                                                <td  class="whitespace-nowrap">{{ $dt->mengajar }}</td>
-                                                <td>{{ $dt->gelar_depan }}</td>
-                                                <td>{{ $dt->gelar_belakang }}</td>
-                                                <td  class="whitespace-nowrap">{{ $dt->pendidikan_terakhir }}</td>
-                                                <td  class="whitespace-nowrap">{{ $dt->prodi }}</td>
-                                                <td>{{ $dt->sertifikasi }}</td>
-                                                <td>{{ $dt->alamat }}</td>
-                                                <td>{{ $dt->keldom }}</td>
-                                                <td>{{ $dt->kecdom }}</td>
-                                                <td>{{ $dt->kodepos }}</td>
-                                                <td>{{ $dt->telepon }}</td>
-                                                <td>{{ $dt->wa }}</td>
-                                                <td>{{ $dt->email }}</td>
-                                                <td>{{ $dt->tugas_tambahan }}</td>
-                                                <td>{{ $dt->sk_cpns }}</td>
-                                                <td>{{ $dt->tgl_cpns }}</td>
-                                                <td>{{ $dt->sk_pengangkatan }}</td>
-                                                <td>{{ $dt->tmt_pengangkatan }}</td>
-                                                <td>{{ $dt->lembaga_pengangkatan }}</td>
-                                                <td>{{ $dt->golongan }}</td>
-                                                <td>{{ $dt->sumber_gaji }}</td>
-                                                <td>{{ $dt->nm_ibu }}</td>
-                                                <td>{{ $dt->status_perkawinan }}</td>
-                                                <td>{{ $dt->nm_pasangan }}</td>
-                                                <td>{{ $dt->pekerjaan_pasangan }}</td>
-                                                <td>{{ $dt->tmt_pns }}</td>
-                                                <td>{{ $dt->npwp }}</td>
-                                                <td>{{ $dt->bank }}</td>
-                                                <td>{{ $dt->norek_bank }}</td>
-                                                <td>{{ $dt->nama_norek }}</td>
-                                                <td>{{ $dt->nik }}</td>
-                                                <td>{{ $dt->no_kk }}</td>
-                                                <td>{{ $dt->is_penggerak }}</td>
-                                                <td>{{ $dt->jam_tgs_tambahan }}</td>
-                                                <td>{{ $dt->jjm }}</td>
-                                                <td>{{ $dt->jam_tgs_tambahan + $dt->jjm }}</td>
-                                                <td>{{ $dt->siswa }}</td>
-                                                <td>{{ $dt->status_sekolah }}</td>
+                                                <td class="px-3 whitespace-nowrap">{{ $dt->nama }}</td>
+                                                <td class="px-3 whitespace-nowrap">{{ $dt->nuptk }}</td>
+                                                <td class="px-3 whitespace-nowrap">{{ $dt->gender }}</td>
+                                                <td class="px-3 whitespace-nowrap" >{{ $dt->tempatlahir }}</td>
+                                                <td class="px-3 whitespace-nowrap" >{{Carbon\Carbon::parse($dt->tanggallahir)->format('d-m-Y') }}</td>
+                                                <td class="px-3 whitespace-nowrap">{{ $dt->nip }}</td>
+                                                <td class="px-3 whitespace-nowrap">{{ $dt->status_kepegawaian }}</td>
+                                                <td class="px-3 whitespace-nowrap" >{{ $dt->mengajar }}</td>
+                                                <td class="px-3 whitespace-nowrap">{{ $dt->gelar_depan }}</td>
+                                                <td class="px-3 whitespace-nowrap">{{ $dt->gelar_belakang }}</td>
+                                                <td class="px-3 whitespace-nowrap" >{{ $dt->pendidikan_terakhir }}</td>
+                                                <td class="px-3 whitespace-nowrap" >{{ $dt->prodi }}</td>
+                                                <td class="px-3 whitespace-nowrap">{{ $dt->sertifikasi }}</td>
+                                                <td class="px-3 whitespace-nowrap">{{ $dt->alamat }}</td>
+                                                <td class="px-3 whitespace-nowrap">{{ $dt->keldom }}</td>
+                                                <td class="px-3 whitespace-nowrap">{{ $dt->kecdom }}</td>
+                                                <td class="px-3 whitespace-nowrap">{{ $dt->kodepos }}</td>
+                                                <td class="px-3 whitespace-nowrap">{{ $dt->telepon }}</td>
+                                                <td class="px-3 whitespace-nowrap">{{ $dt->wa }}</td>
+                                                <td class="px-3 whitespace-nowrap">{{ $dt->email }}</td>
+                                                <td class="px-3 whitespace-nowrap">{{ $dt->tugas_tambahan }}</td>
+                                                <td class="px-3 whitespace-nowrap">{{ $dt->sk_cpns }}</td>
+                                                <td class="px-3 whitespace-nowrap">{{ $dt->tgl_cpns }}</td>
+                                                <td class="px-3 whitespace-nowrap">{{ $dt->sk_pengangkatan }}</td>
+                                                <td class="px-3 whitespace-nowrap">{{ $dt->tmt_pengangkatan }}</td>
+                                                <td class="px-3 whitespace-nowrap">{{ $dt->lembaga_pengangkatan }}</td>
+                                                <td class="px-3 whitespace-nowrap">{{ $dt->golongan }}</td>
+                                                <td class="px-3 whitespace-nowrap">{{ $dt->sumber_gaji }}</td>
+                                                <td class="px-3 whitespace-nowrap">{{ $dt->nm_ibu }}</td>
+                                                <td class="px-3 whitespace-nowrap">{{ $dt->status_perkawinan }}</td>
+                                                <td class="px-3 whitespace-nowrap">{{ $dt->nm_pasangan }}</td>
+                                                <td class="px-3 whitespace-nowrap">{{ $dt->pekerjaan_pasangan }}</td>
+                                                <td class="px-3 whitespace-nowrap">{{ $dt->tmt_pns }}</td>
+                                                <td class="px-3 whitespace-nowrap">{{ $dt->npwp }}</td>
+                                                <td class="px-3 whitespace-nowrap">{{ $dt->bank }}</td>
+                                                <td class="px-3 whitespace-nowrap">{{ $dt->norek_bank }}</td>
+                                                <td class="px-3 whitespace-nowrap">{{ $dt->nama_norek }}</td>
+                                                <td class="px-3 whitespace-nowrap">{{ $dt->nik }}</td>
+                                                <td class="px-3 whitespace-nowrap">{{ $dt->no_kk }}</td>
+                                                <td class="px-3 whitespace-nowrap">{{ $dt->is_penggerak }}</td>
+                                                <td class="px-3 whitespace-nowrap">{{ $dt->jam_tgs_tambahan }}</td>
+                                                <td class="px-3 whitespace-nowrap">{{ $dt->jjm }}</td>
+                                                <td class="px-3 whitespace-nowrap">{{ $dt->jam_tgs_tambahan + $dt->jjm }}</td>
+                                                <td class="px-3 whitespace-nowrap">{{ $dt->siswa }}</td>
+                                                <td class="px-3 whitespace-nowrap">{{ $dt->status_sekolah }}</td>
+                                                @if(Auth::user()->hasRole('kepalasekolah'))
+                                                <td class="px-3 text-center sticky right-0 bg-white even:bg-gray-50 z-10">
+                                                	<div class="flex items-center justify-center gap-2">
+                                                		<a href="/sekolah/tendik/detail/{{$dt->id}}" class="text-blue-600 hover:text-blue-800 px-2 py-1 rounded hover:bg-blue-50" title="Edit">
+                                                			<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path></svg>
+														</a>
+                                                		<button class="text-red-600 hover:text-red-800 px-2 py-1 rounded hover:bg-red-50" title="Delete">
+                                                			<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path></svg>
+                                                		</button>
+                                                	</div>
+                                                </td>
+												@endif
 									</tr>
 									@endforeach
 								@else

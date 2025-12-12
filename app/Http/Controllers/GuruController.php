@@ -8,6 +8,13 @@ use App\Models\Sekolah;
 use App\Models\User;
 use Illuminate\Support\Facades\DB;
 use Spatie\Permission\Models\Role;
+use App\Models\Province;
+use App\Models\Regency;
+use App\Models\Pangkat;
+use App\Models\JenjangPendidikanDikti;
+
+use App\Models\MataPelajaran;
+
 class GuruController extends Controller
 {
     public function index()
@@ -95,5 +102,26 @@ class GuruController extends Controller
         $sekolah = Sekolah::where('npsn', $kode_sekolah)->first();
       
         return view('GTK.guru.perSekolah', compact('data', 'sekolah'));
+    }
+    public function detail($id)
+    {
+        $guru = User::join('ms_biodatauser as b', 'users.id', '=', 'b.id')
+            ->whereHas('roles', function($q) {
+                $q->where('name', 'guru');
+            })
+            ->where('users.id', $id)
+            ->select('users.*', 'b.*')
+            ->first();
+
+        if (!$guru) {
+            abort(404, 'Guru tidak ditemukan');
+        }
+        $data['asal_satuan'] = Sekolah::orderBy('kode_wilayah_induk_kecamatan', 'ASC')->orderBy('created_at', 'ASC')->get();
+        $data['kab'] = Regency::all();
+        $data['prov'] = Province::all();
+        $data['pangkat'] = Pangkat::where('is_aktif', true)->orderBy('gol', 'DESC')->get();
+        $data['jenjang'] = JenjangPendidikanDikti::all();
+        $data['mapel'] = MataPelajaran::all();
+        return view('GTK.guru.detail', compact('guru', 'data'));
     }
 }
